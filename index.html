@@ -1,0 +1,389 @@
+<!DOCTYPE html>
+<html lang="id">
+  <head>
+    <meta charset="UTF-8" />
+    <title>BlueMinimal Store</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <style>
+      :root {
+        --blue-main: #1e3a8a;
+        --blue-soft: #3b82f6;
+        --blue-light: #dbeafe;
+        --text-dark: #0f172a;
+        --card-bg: #ffffff;
+      }
+
+      * {
+        box-sizing: border-box;
+        margin: 0;
+        padding: 0;
+        font-family: "Segoe UI", sans-serif;
+      }
+
+      body {
+        background: #1b1d24;
+        color: var(--text-dark);
+      }
+
+      /* ===== SLIDER ===== */
+      .slider {
+        width: 100%;
+        height: 280px;
+        overflow: hidden;
+        position: relative;
+      }
+
+      .slides {
+        display: flex;
+        width: 100%;
+        height: 100%;
+        animation: slide 12s infinite;
+      }
+
+      .slide {
+        width: 100%;
+        height: 120%;
+        flex-shrink: 0;
+      }
+
+      .slide {
+        background-position: center;
+        background-position: center bottom;
+      }
+
+      /* === SLIDE GAMBAR === */
+      .slide:nth-child(1) {
+        background-image: url("https://i.ibb.co.com/DHP6s5Kr/download-13.jpg");
+      }
+
+      .slide:nth-child(2) {
+        background-image: url("https://i.ibb.co.com/wrw5R06j/creds-for-vwolly-on-ttk.jpg");
+      }
+
+      .slide:nth-child(3) {
+        background-image: url("https://i.ibb.co.com/mCq3kvGt/download-14.jpg");
+      }
+
+      .slide-content {
+        height: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        color: white;
+        font-size: 32px;
+        font-weight: 600;
+        letter-spacing: 1px;
+      }
+
+      @keyframes slide {
+        0% {
+          transform: translateX(0);
+        }
+        33% {
+          transform: translateX(0);
+        }
+        38% {
+          transform: translateX(-100%);
+        }
+        66% {
+          transform: translateX(-100%);
+        }
+        71% {
+          transform: translateX(-200%);
+        }
+        100% {
+          transform: translateX(-200%);
+        }
+      }
+
+      /* ===== HEADER ===== */
+      header {
+        padding: 25px;
+        text-align: center;
+        background: rgb(0, 0, 0);
+        border-bottom: 1px solid #3d3e41;
+      }
+
+      header h1 {
+        color: var(--blue-main);
+        font-size: 28px;
+      }
+
+      header p {
+        color: #475569;
+        margin-top: 5px;
+      }
+
+      /* ===== PRODUCT GRID ===== */
+      .container {
+        padding: 40px 5%;
+      }
+
+      .products {
+        display: grid;
+        grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+        gap: 25px;
+      }
+
+      .product {
+        background: var(--card-bg);
+        border-radius: 14px;
+        padding: 15px;
+        box-shadow: 0 8px 25px rgba(30, 58, 138, 0.08);
+        transition: transform 0.3s;
+      }
+
+      .product:hover {
+        transform: translateY(-6px);
+      }
+
+      .product-img {
+        width: 100%;
+        height: 150px;
+        background: var(--blue-light);
+        border-radius: 10px;
+        margin-bottom: 12px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        color: #64748b;
+        font-size: 14px;
+      }
+
+      .product h3 {
+        font-size: 16px;
+        margin-bottom: 6px;
+      }
+
+      .price {
+        color: var(--blue-soft);
+        font-weight: 600;
+        margin-bottom: 10px;
+      }
+
+      .btn {
+        display: block;
+        text-align: center;
+        padding: 10px;
+        background: var(--blue-main);
+        color: white;
+        border-radius: 8px;
+        text-decoration: none;
+        font-size: 14px;
+      }
+
+      .btn:hover {
+        background: var(--blue-soft);
+      }
+
+      footer {
+        text-align: center;
+        padding: 20px;
+        color: #64748b;
+        font-size: 14px;
+      }
+    </style>
+  </head>
+
+  <body>
+    <!-- SLIDER -->
+    <div class="slider">
+      <div class="slides">
+        <div class="slide">
+          <div class="slide-content">Aman Dan Terpercaya</div>
+        </div>
+        <div class="slide">
+          <div class="slide-content">Harga Bersahabat🥀</div>
+        </div>
+        <div class="slide">
+          <div class="slide-content">#bantumasyarakatkecil</div>
+        </div>
+      </div>
+    </div>
+
+    <!-- HEADER -->
+    <header>
+      <h1>Mifunee Official Store</h1>
+      <p>Tempat Yang Tepat Untuk Menghabiskan Uang Anda!!</p>
+    </header>
+
+    <!-- PRODUCTS -->
+    <div class="container">
+      <div class="products">
+        <!-- 20 PRODUK -->
+        <!-- COPY AJA STRUKTUR INI UNTUK NAMBAH PRODUK -->
+        <!-- GANTI TEKS & HARGA SESUAI KEBUTUHAN -->
+
+        <!-- LOOP MANUAL -->
+        <!-- 1 -->
+        <div class="product">
+          <div class="product-img">
+            <img
+              src="https://i.ibb.co.com/vxHjZ9gm/el-maja-memek.png"
+              alt="Produk 1"
+            />
+          </div>
+          <h3>Big Elshark Grand Maja</h3>
+          <div class="price">Rp 45.000</div>
+          <a href="https://wa.me/6285950109925" target="_blank" class="btn"
+            >Beli Sekarang</a
+          >
+        </div>
+
+        <!-- 2 -->
+        <div class="product">
+          <div class="product-img">
+            <img
+              src="https://i.ibb.co.com/35cCm17J/maja-biasa.png"
+              alt="Produk 1"
+            />
+          </div>
+          <h3>Elshark Grand Maja</h3>
+          <div class="price">Rp 25.000</div>
+          <a href="https://wa.me/6285950109925" target="_blank" class="btn"
+            >Beli Sekarang</a
+          >
+        </div>
+
+        <!-- 3 -->
+        <div class="product">
+          <div class="product-img">
+            <img
+              src="https://i.ibb.co.com/ymvsTQMT/lochness.png"
+              alt="Produk 1"
+            />
+          </div>
+          <h3>Ancient Lochnes Monster</h3>
+          <div class="price">Rp 30.000</div>
+          <a href="https://wa.me/6285950109925" target="_blank" class="btn"
+            >Beli Sekarang</a
+          >
+        </div>
+
+        <!-- DUPLIKASI SAMPAI 20 -->
+        <!-- ... -->
+
+        <!-- 20 -->
+        <div class="product">
+          <div class="product-img">
+            <img src="https://i.ibb.co.com/BHz1WQPH/blop.png" alt="Produk 1" />
+          </div>
+          <h3>Blob Shark</h3>
+          <div class="price">Rp 5.000</div>
+          <a href="https://wa.me/6285950109925" target="_blank" class="btn"
+            >Beli Sekarang</a
+          >
+        </div>
+
+        <div class="product">
+          <div class="product-img">
+            <img
+              src="https://i.ibb.co.com/0RRhkMmv/frostborn.png"
+              alt="Produk 1"
+            />
+          </div>
+          <h3>Frostborn Shark</h3>
+          <div class="price">Rp 7.000</div>
+          <a href="https://wa.me/6285950109925" target="_blank" class="btn"
+            >Beli Sekarang</a
+          >
+        </div>
+
+        <div class="product">
+          <div class="product-img">
+            <img
+              src="https://i.ibb.co.com/dJpg3L5N/strawberry-mega.png"
+              alt="Produk 1"
+            />
+          </div>
+          <h3>Strawberry Choco Megalodon(limited)</h3>
+          <div class="price">Rp 40.000</div>
+          <a href="https://wa.me/6285950109925" target="_blank" class="btn"
+            >Beli Sekarang</a
+          >
+        </div>
+
+        <div class="product">
+          <div class="product-img">
+            <img
+              src="https://i.ibb.co.com/DPV19Sc4/king-jelly.png"
+              alt="Produk 1"
+            />
+          </div>
+          <h3>King Jelly</h3>
+          <div class="price">Rp 7.000</div>
+          <a href="https://wa.me/6285950109925" target="_blank" class="btn"
+            >Beli Sekarang</a
+          >
+        </div>
+
+        <div class="product">
+          <div class="product-img">
+            <img
+              src="https://i.ibb.co.com/fY1njZYW/tralalelo.png"
+              alt="Produk 1"
+            />
+          </div>
+          <h3>Tralalero Tralala</h3>
+          <div class="price">Rp 10.000</div>
+          <a href="https://wa.me/6285950109925" target="_blank" class="btn"
+            >Beli Sekarang</a
+          >
+        </div>
+
+        <div class="product">
+          <div class="product-img">
+            <img src="https://i.ibb.co.com/0Rc52Dd9/koin.png" alt="Produk 1" />
+          </div>
+          <h3>1M Coin</h3>
+          <div class="price">Rp 5.000</div>
+          <a href="https://wa.me/6285950109925" target="_blank" class="btn"
+            >Beli Sekarang</a
+          >
+        </div>
+
+        <div class="product">
+          <div class="product-img">
+            <img
+              src="https://i.ibb.co.com/8n9PC3p8/sacred-guardian-laba-laba-sunda.png"
+              alt="Produk 1"
+            />
+          </div>
+          <h3>Sacred Guardian Squid</h3>
+          <div class="price">Rp 5.000</div>
+          <a href="https://wa.me/6285950109925" target="_blank" class="btn"
+            >Beli Sekarang</a
+          >
+        </div>
+
+        <div class="product">
+          <div class="product-img">
+            <img src="https://i.ibb.co.com/Tq7wcPPV/bone.png" alt="Produk 1" />
+          </div>
+          <h3>Bone Whale</h3>
+          <div class="price">Rp 8.000</div>
+          <a href="https://wa.me/6285950109925" target="_blank" class="btn"
+            >Beli Sekarang</a
+          >
+        </div>
+
+        <div class="product">
+          <div class="product-img">
+            <img
+              src="https://i.ibb.co.com/qLth0BxD/gladiator-shark.png"
+              alt="Produk 1"
+            />
+          </div>
+          <h3>Gladiator Shark</h3>
+          <div class="price">Rp 5.000</div>
+          <a href="https://wa.me/6285950109925" target="_blank" class="btn"
+            >Beli Sekarang</a
+          >
+        </div>
+      </div>
+    </div>
+
+    <footer>© 2025 Mifunee Official Store</footer>
+  </body>
+</html>
